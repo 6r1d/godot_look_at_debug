@@ -21,6 +21,15 @@ A simple version of this check is located inside an error message, too:
 p_up.cross(p_target - p_pos) == Vector3()
 ```
 
+I found this issue telling some details about
+[look_at](https://github.com/godotengine/godot/issues/28737) behavior.
+
+> The error is correct, there are many possibilities when the vectors are aligned.
+
+If these possibilities are related to `look_at` results,
+I wish there was some attribute to choose a result by some properties,
+not an error.
+
 # Hacky solution
 
 ```

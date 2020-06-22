@@ -36,7 +36,7 @@ not an error.
 func update_connection(ao, bo):
 	$connection.transform.origin = midpoint(ao, bo)
 	$connection.height = ao.distance_to(bo)
-	if Vector3(0, 1, 0).cross(bo - midpoint(ao, bo)) != Vector3():
+	if Vector3(0, 1, 0).cross(bo - midpoint(ao, bo)) == Vector3():
 		$connection.look_at(bo + Vector3(0.0, 0.0, 0.0001), Vector3(0, 1, 0))
 	else:
 		$connection.look_at(bo, Vector3(0, 1, 0))
